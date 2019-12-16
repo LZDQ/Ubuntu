@@ -1,2 +1,1 @@
-# Ubuntu
-Note of Ubuntu
+## Note of Ubuntu
