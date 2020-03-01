@@ -34,7 +34,7 @@ function! RemoveNxDoubCh()
 		execute 'normal! ddk$'
 		return
 	elseif col(".") == 1
-		execute 'normal! kJ'
+		execute 'normal! x'
 		return
 	endif
 	let ch=line[col(".")-1]
@@ -64,8 +64,10 @@ function! RemoveNxDoubCh()
 endfunction
 
 inoremap <C-D> <ESC>dd
+inoremap <C-V> <ESC>"+pa
 inoremap <BS> <ESC>:call RemoveNxDoubCh()<CR>a
-nmap <F9> :w<CR>:!cls<CR>:!g++ % -o %< -Wall -g<CR>
+nmap <F9> :w<CR>:!cls<CR>:!g++ % -o %<<CR>
+nmap <F12> :w<CR>:!cls<CR>:!g++ % -o %< -Wall -g<CR>
 nmap <F10> :!cls<CR>:!%<<CR>
 nmap <tab> 4l
 vmap <tab> 4l
@@ -80,8 +82,8 @@ set shiftwidth=4
 set softtabstop=4
 set mouse=a
 set cindent
-set lines=50
-set columns=200
+set lines=35
+set columns=140
 
 function! WriteFor(str)
 	let outputstr = "for(int " . a:str[0] . "=" . a:str[1] . "; " . a:str[0] . "<=" . a:str[2] . "; " . a:str[0] . "++)"
@@ -112,5 +114,6 @@ inoremap <C-F> <esc>:call WriteFor("")<left><left>
 inoremap <C-U> <esc>:call WriteEdge("")<left><left>
 inoremap <C-C> <esc>:call WriteScanf("")<left><left>
 inoremap UU <ESC>ccusing namespace std;
+inoremap TY <ESC>cctypedef long long ll;
 set noexpandtab
 %retab!
