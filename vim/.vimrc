@@ -35,7 +35,7 @@ function! RemoveNxDoubCh()
 		execute 'normal! ddk$'
 		return
 	elseif col(".") == 1
-		execute 'normal! kJ'
+		execute 'normal! x'
 		return
 	endif
 	let ch=line[col(".")-1]
@@ -65,6 +65,7 @@ function! RemoveNxDoubCh()
 endfunction
 
 inoremap <C-D> <ESC>dd
+inoremap <C-V> <ESC>"+pa
 inoremap <BS> <ESC>:call RemoveNxDoubCh()<CR>a
 nmap <C-F9> :w<CR>:!clear<CR>:!g++ % -o %<<CR>
 nmap <C-F10> :!clear<CR>:!./%<<CR>
@@ -123,5 +124,6 @@ inoremap <C-F> <esc>:call WriteFor("")<left><left>
 inoremap <C-U> <esc>:call WriteEdge("")<left><left>
 inoremap <C-C> <esc>:call WriteScanf("")<left><left>
 inoremap UU <ESC>ccusing namespace std;
+inoremap TY <ESC>cctypedef long long ll;
 set noexpandtab
 %retab!
