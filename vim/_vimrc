@@ -21,7 +21,6 @@ function! RepairNxDoubCh(ch)
 endfunction
 
 inoremap jk <ESC>
-inoremap J <ESC>Ji
 inoremap <TAB> <C-P>
 inoremap <S-TAB> <TAB>
 inoremap ) <ESC>:call RepairNxDoubCh(')')<CR>a
