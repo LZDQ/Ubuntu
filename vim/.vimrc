@@ -22,7 +22,6 @@ function! RepairNxDoubCh(ch)
 endfunction
 
 inoremap jk <ESC>
-inoremap J <ESC>Ji
 inoremap <TAB> <C-P>
 inoremap <S-TAB> <TAB>
 inoremap ) <ESC>:call RepairNxDoubCh(')')<CR>a
@@ -67,7 +66,8 @@ endfunction
 inoremap <C-D> <ESC>dd
 inoremap <C-V> <ESC>"+pa
 inoremap <BS> <ESC>:call RemoveNxDoubCh()<CR>a
-nmap <C-F9> :w<CR>:!clear<CR>:!g++ % -o %<<CR>
+nmap <F9> :w<CR>:!clear<CR>:!g++ % -o %<<CR>
+nmap <C-F9> :w<CR>:!clear<CR>:!g++ % -o %< -g -Wall<CR>
 nmap <C-F10> :!clear<CR>:!./%<<CR>
 nmap <tab> 4l
 inoremap <C-H> <left>
