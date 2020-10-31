@@ -87,7 +87,7 @@ set softtabstop=4
 set mouse=a
 set cindent
 set lines=40
-set columns=110
+set columns=120
 function! Testfunc()
 	let lefth=line("'<")
 	let leftc=col("'<")
@@ -127,3 +127,4 @@ inoremap UU <ESC>ccusing namespace std;
 inoremap TY <ESC>cctypedef long long ll;
 set noexpandtab
 %retab!
+set ic
