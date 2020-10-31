@@ -68,7 +68,7 @@ inoremap <C-V> <ESC>"+pa
 inoremap <BS> <ESC>:call RemoveNxDoubCh()<CR>a
 nmap <F9> :w<CR>:!clear<CR>:!g++ % -o %<<CR>
 nmap <C-F9> :w<CR>:!clear<CR>:!g++ % -o %< -g -Wall<CR>
-nmap <C-F10> :!clear<CR>:!./%<<CR>
+nmap <F12> :!clear<CR>:!./%<<CR>
 nmap <tab> 4l
 inoremap <C-H> <left>
 inoremap <C-L> <right>
