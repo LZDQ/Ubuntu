@@ -123,7 +123,11 @@ function! WriteFor(str)
 			endif
 		endfor
 	endif
-	let outputstr = "for(int " . a . "=" . b . "; " . a  . "<=" . c . "; " . a . "++)"
+	let outputstr = "for(int " . a . "=" . b . "; " . a  . "<"
+	if b!="0"
+		let outputstr = outputstr . "="
+	endif
+	let outputstr = outputstr . c . "; " . a . "++)"
 	execute "normal! cc" . outputstr
 endfunction
 
